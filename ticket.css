@@ -1,0 +1,432 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    /* background-color: #000000; */
+}
+
+body{
+    /* background: url("bd.jpg!w700wp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; */
+    background-color: rgb(82, 102, 228);
+    overflow: scroll;
+    overflow-x: auto;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+    /* padding-left:20px;
+    padding-right: 20px; */
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.wrapper{
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    min-height: 110vh;
+    /* background: rgba(39, 39, 39, 0.4); */
+}
+
+.nav{
+    /* position: fixed; */
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    /* background: linear-gradient(rgba(39,39,39, 0.6), transparent); */
+    z-index: 100;
+}
+.nav-logo p{
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+}
+.nav-menu ul{
+    display: flex;
+}
+.nav-menu ul li{
+    list-style-type: none;
+}
+.nav-menu ul li .link{
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+    padding-bottom: 15px;
+    margin: 0 25px;
+}
+.link:hover, .active{
+    border-bottom: 2px solid #fff;
+}
+.nav-button .btn{
+    width: 130px;
+    height: 40px;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.4);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+.btn:hover{
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.btn.white-btn{
+    background: rgba(255, 255, 255, 0.7);
+}
+.btn.btn.white-btn:hover{
+    background: rgba(255, 255, 255, 0.5);
+}
+.nav-menu-btn{
+    display: none;
+}
+
+
+#train-results{
+    color: #212121;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.hiddentable{
+    display: none;
+}
+
+
+
+.form-box{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 512px;
+    height: 450px;
+    overflow: hidden;
+    z-index: 2;
+    margin-top: 120px; /* Added margin to prevent overlap */
+}
+
+.form-box_ticket {
+    width: 100%;
+    padding: 20px; 
+    /* margin-top: 100px; */
+    box-sizing: border-box; 
+    background-color: #393333; 
+    border-radius: 5px; 
+    margin-top: 15px; /* Added margin to prevent overlap */
+    color: #ffffff;
+}
+
+.login-container_ticket {
+    width: 100%;
+    max-width: 600px; 
+    margin: 0 auto; 
+}
+
+/* Top header styling */
+.login-container_ticket .top {
+    text-align: center;
+    margin-bottom: 20px; 
+}
+
+/* Input box styling */
+.input-box_ticket {
+    width: 100%;
+    margin-bottom: 15px; 
+    position: relative;
+    /* z-index: 10;  */
+    /* color: #ccc; */
+}
+
+.input-field_ticket {
+    width: 100%;
+    padding: 10px;
+    padding-left: 35px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;    
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+}
+
+
+.input-box_ticket i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #000000; 
+    font-size: 20px; 
+}
+
+
+.submit_ticket {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.submit_ticket:hover {
+    background-color: #0056b3;
+}
+
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    }
+
+    .grid-item {
+        font-size: 16px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    }
+
+    .grid-item {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+h2 {
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ababab;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 2px solid #000000;
+    border-radius: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .nav-menu ul {
+        flex-direction: column;
+        align-items: center;
+        display: none;
+    }
+
+    .nav-menu ul.responsive {
+        display: flex;
+    }
+
+    .nav-menu-btn {
+        display: block;
+    }
+
+    .nav-button {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .nav-button .btn {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .input-box_ticket input {
+        padding-left: 30px;
+    }
+
+    .input-box_ticket i {
+        left: 5px;
+    }
+
+    table, th, td {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+}
+
+
+@media only screen and (max-width: 900px){
+
+    .nav-button{
+        display: none;
+    }
+    .nav-menu.responsive{
+        top: 100px;
+    }
+    .nav-menu{
+        position: absolute;
+        top: -800px;
+        display: flex;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.2);
+        width: 100%;
+        height: 90vh;
+        backdrop-filter: blur(20px);
+        transition: .3s;
+    }
+    .nav-menu ul{
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-menu-btn{
+        display: block;
+    }
+    .nav-menu-btn i{
+        font-size: 25px;
+        color: #fff;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        cursor: pointer;
+        transition: .3s;
+    }
+    .nav-menu-btn i:hover{
+        background: rgba(255, 255, 255, 0.15);
+    }
+}
+@media only screen and (max-width: 540px) {
+    .wrapper{
+        min-height: 100vh;
+    }
+    .form-box{
+        width: 100%;
+        height: 500px;
+    }
+
+    .form-box_ticket{
+        width: 100%;
+        height: 500px;
+    }
+    .register-container, .login-container{
+        width: 100%;
+        padding: 0 20px;
+    }
+    .register-container .two-forms{
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+.book-Ticket-btn {
+    background-color: #28a745; /* Green background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Padding for size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.book-Ticket-btn:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+
+
+
+
+
+
+/* Table Styling */
+.table-container {
+    width: 100%;
+    overflow-x: auto; /* Enable horizontal scrolling for small screens */
+    margin: 20px 0;
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for the table */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+    color: #ffffff;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    th, td {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    th, td {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
+
+.suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    background-color: #1a1a1a;
+    border: px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    width: calc(100% - 2px);
+    max-height: 150px; /* Set max height for scroll */
+    overflow-y: auto; /* Add scroll when content exceeds height */
+}
+.suggestions div {
+    padding: 10px;
+    cursor: pointer;
+}
+.suggestions div:hover {
+    background-color: #f0f0f0;
+    color: #000000;
+}
+
+/* Your specific styles */
+#From-suggestions,
+#To-suggestions {
+    width: calc(100% - 2px);
+    margin-top: -1px;
+}
+
