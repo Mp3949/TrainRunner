@@ -30,7 +30,10 @@ registerButton.addEventListener('click', () => {
     let email = document.getElementById('Email').value;
     let password = document.getElementById('Password').value;
     let firstname = document.getElementById('Username').value;
-
+    // if (!validateEmail(email)) {
+    //     alert('Invalid email format');
+    //     return;
+    // }
     createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
             const user = userCredential.user;
@@ -58,9 +61,12 @@ registerButton.addEventListener('click', () => {
 // Login button event listener
 let loginButton = document.getElementById('loginSubmitBtn');
 loginButton.addEventListener('click', () => {
-    let email = document.getElementById('Email').value;
-    let password = document.getElementById('Password').value;
-
+    let email = document.getElementById('Emaillogin').value;
+    let password = document.getElementById('Passwordlogin').value;
+    // if (!validateEmail(email)) {
+    //     alert('Invalid email format');
+    //     return;
+    // }
     signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
             const user = userCredential.user;
@@ -71,14 +77,14 @@ loginButton.addEventListener('click', () => {
             // update(ref(database, 'users/' + user.uid), {
             //     last_login: Date.now()
             // })
-                // .then(() => {
-                //     alert('User Logged in successfully!');
-                //     localStorage.setItem('isLoggedIn', 'true'); // Set login state
-                //     window.location.href = 'Ticket.html'; // Redirect to ticket page
-                // })
-                // .catch((error) => {
-                //     alert('error');
-                // });
+            //     .then(() => {
+            //         alert('User Logged in successfully!');
+            //         localStorage.setItem('isLoggedIn', 'true'); // Set login state
+            //         window.location.href = 'Ticket.html'; // Redirect to ticket page
+            //     })
+            //     .catch((error) => {
+            //         alert('error');
+            //     });
         
         .catch((error) => {
             const errorCode = error.code;
@@ -115,3 +121,8 @@ forgotpassword.addEventListener('click', () => {
             const errorMessage = error.message;
         });
 });
+
+function validateEmail(email) {
+    var re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return re.test(String(email).toLowerCase());
+}
