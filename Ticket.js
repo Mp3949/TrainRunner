@@ -102,7 +102,7 @@ async function searchTrains(event) {
     const options = {
         method: 'GET',
         headers: {
-            'x-rapidapi-key': '3e0a22547cmshe9428c7fad9f821p1e4230jsnc67389e81c35',
+            'x-rapidapi-key': 'eb433b5b6emsh8352744301b0239p1d1677jsn0202def41819',
             'x-rapidapi-host': 'irctc1.p.rapidapi.com'
         }
     };
