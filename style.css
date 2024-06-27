@@ -203,6 +203,7 @@ header{
 @media only screen and (max-width: 900px){
     .nav-button{
 /*         display: none; */
+        display: flex;
     }
     .nav-menu.responsive{
         top: 100px;
@@ -223,7 +224,7 @@ header{
         text-align: center;
     }
     .nav-menu-btn{
-        display: block;
+        display: flex;
     }
     .nav-menu-btn i{
         font-size: 25px;
