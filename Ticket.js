@@ -149,16 +149,28 @@ function displayTrains(trains) {
     document.getElementById('train-results').classList.remove('hiddentable');
     console.log('executed');
 }
-
-document.addEventListener('click', function (event) {
+function handleBooking(event) {
     if (event.target && event.target.classList.contains('book-Ticket-btn')) {
         const date = event.target.getAttribute('data-date');
         const fromStationName = document.getElementById('From').value.trim();
         const toStationName = document.getElementById('To').value.trim();
 
-        const bookingUrl = `https://www.confirmtkt.com/rbooking-d/trains/from/${fromStationName}/to/${toStationName}/${date}`;
-        window.location.href = bookingUrl;
+        if (fromStationName && toStationName && date) {
+            // Construct URL for ConfirmTkt
+            const bookingUrl = `https://www.confirmtkt.com/rbooking-d/trains/from/${encodeURIComponent(fromStationName)}/to/${encodeURIComponent(toStationName)}/${date}`;
+
+            console.log('Redirecting to:', bookingUrl); // Log URL for debugging
+
+            // Redirect to the booking URL
+            window.location.href = bookingUrl;
+        } else {
+            alert('Please fill in all fields.');
+        }
     }
-});
+}
+
+// Add event listeners for both click and touchstart events
+document.addEventListener('click', handleBooking);
+document.addEventListener('touchstart', handleBooking);
 
 document.getElementById('SearchtrainSubmitBtn').addEventListener('click', searchTrains);
